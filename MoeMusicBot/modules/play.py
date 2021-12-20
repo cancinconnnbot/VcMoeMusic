@@ -1,20 +1,3 @@
-# MoeMusicBot (Telegram bot project)
-# Copyright (C) 2021  Inukaasith
-# Copyright (C) 2021  TheHamkerCat (Python_ARQ)
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
 import json
 import os
 from os import path
@@ -450,7 +433,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command(["play", f"oynat@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["play"]) & other_filters)
 async def stream(_, message: Message):
     costumer = message.from_user.mention
     lel = await message.reply_text("🔁 **processing** sound...")
@@ -459,10 +442,10 @@ async def stream(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                    text="✨ ɢʀᴏᴜᴘ", url=f"https://t.me/AyVeGece1"
                 ),
                 InlineKeyboardButton(
-                    text="🌻 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    text="🌻 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/AyVeGece1"
                 ),
             ]
         ]
